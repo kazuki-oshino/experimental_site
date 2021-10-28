@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:experimental_site/router/router.gr.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(MyApp());
@@ -42,12 +43,18 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             /// auto_route example
             ElevatedButton(
-              onPressed: () => context.router.pushNamed("/main1/gorilla"),
+              onPressed: () => context.router.pushNamed('/main1/gorilla'),
               child: Text('AutoRoute'),
             ),
             ElevatedButton(
-              onPressed: () => context.router.pushNamed("/main1/gorilla"),
-              child: Text('AutoRoute'),
+              onPressed: () async {
+                await precachePicture(
+                  ExactAssetPicture(SvgPicture.svgStringDecoderBuilder, 'assets/pic/s1.svg'),
+                  null,
+                );
+                context.router.pushNamed('/flutter-svg-sample');
+              },
+              child: Text('FlutterSvg'),
             ),
           ],
         ),
