@@ -1,8 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:experimental_site/views/auto_route_page1.dart';
-import 'package:experimental_site/views/auto_route_page2.dart';
-import 'package:experimental_site/views/auto_route_page3.dart';
 
+import '../views/view.dart';
 import '../../main.dart';
 
 @AdaptiveAutoRouter(
@@ -24,6 +22,10 @@ import '../../main.dart';
     ),
     AutoRoute(
       page: AutoRoutePage3,
+    ),
+    AutoRoute(
+      page: FlutterSvgSample,
+      path: '/flutter-svg-sample'
     ),
   ],
 )

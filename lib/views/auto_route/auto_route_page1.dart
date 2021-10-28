@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:experimental_site/common/router/router.gr.dart';
+import 'package:experimental_site/router/router.gr.dart';
 
 class AutoRoutePage1 extends StatelessWidget {
   const AutoRoutePage1({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:experimental_site/common/router/router.gr.dart';
+import 'package:experimental_site/router/router.gr.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('サンプルアプリ'),
+        title: Text('魂のサンプル'),
       ),
       body: Center(
         child: Column(
@@ -43,7 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
             /// auto_route example
             ElevatedButton(
               onPressed: () => context.router.pushNamed("/main1/gorilla"),
-              child: Text('AutoRouteRoute1'),
+              child: Text('AutoRoute'),
+            ),
+            ElevatedButton(
+              onPressed: () => context.router.pushNamed("/main1/gorilla"),
+              child: Text('AutoRoute'),
             ),
           ],
         ),
