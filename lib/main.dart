@@ -49,7 +49,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               onPressed: () async {
                 await precachePicture(
-                  ExactAssetPicture(SvgPicture.svgStringDecoderBuilder, 'assets/pic/s1.svg'),
+                  ExactAssetPicture(
+                    SvgPicture.svgStringDecoderBuilder,
+                    'assets/pic/s1.svg',
+                  ),
                   null,
                 );
                 context.router.pushNamed('/flutter-svg-sample');
