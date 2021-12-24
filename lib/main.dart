@@ -59,6 +59,10 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text('FlutterSvg'),
             ),
+            ElevatedButton(
+              onPressed: () => context.router.pushNamed('/cool-divider'),
+              child: Text('Cool Divider'),
+            ),
           ],
         ),
       ),

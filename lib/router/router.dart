@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:experimental_site/views/cool_divider/cool_divider_page.dart';
 
 import '../views/view.dart';
 import '../../main.dart';
@@ -26,6 +27,10 @@ import '../../main.dart';
     AutoRoute(
       page: FlutterSvgSample,
       path: '/flutter-svg-sample'
+    ),
+    AutoRoute(
+        page: CoolDividerPage,
+        path: '/cool-divider'
     ),
   ],
 )
