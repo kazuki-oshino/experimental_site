@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:experimental_site/views/cool_divider/cool_divider_page.dart';
+import 'package:experimental_site/views/riverpod/riverpod_stateless.dart';
 
 import '../views/view.dart';
 import '../../main.dart';
@@ -31,6 +32,10 @@ import '../../main.dart';
     AutoRoute(
         page: CoolDividerPage,
         path: '/cool-divider'
+    ),
+    AutoRoute(
+        page: RiverpodStateless,
+        path: '/riverpod-stateless'
     ),
   ],
 )

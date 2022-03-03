@@ -2,9 +2,14 @@ import 'package:auto_route/auto_route.dart';
 import 'package:experimental_site/router/router.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -62,6 +67,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               onPressed: () => context.router.pushNamed('/cool-divider'),
               child: Text('Cool Divider'),
+            ),
+            ElevatedButton(
+              onPressed: () => context.router.pushNamed('/riverpod-stateless'),
+              child: Text('Riverpod'),
             ),
           ],
         ),
