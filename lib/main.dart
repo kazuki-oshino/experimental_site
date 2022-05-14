@@ -77,6 +77,10 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () => context.router.pushNamed('/enum-play-ground'),
               child: const Text('Enum'),
             ),
+            ElevatedButton(
+              onPressed: () => context.router.pushNamed('/freezed-play-ground'),
+              child: const Text('Freezed'),
+            ),
           ],
         ),
       ),

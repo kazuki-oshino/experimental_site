@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:experimental_site/views/cool_divider/cool_divider_page.dart';
 import 'package:experimental_site/views/enum_play_ground/enum_play_ground.dart';
+import 'package:experimental_site/views/freezed_play_ground/freezed_play_ground.dart';
 import 'package:experimental_site/views/riverpod/riverpod_stateless.dart';
 
 import '../../main.dart';
@@ -41,6 +42,10 @@ import '../views/view.dart';
     AutoRoute<dynamic>(
       page: EnumPlayGround,
       path: '/enum-play-ground',
+    ),
+    AutoRoute<dynamic>(
+      page: FreezedPlayGround,
+      path: '/freezed-play-ground',
     ),
   ],
 )
