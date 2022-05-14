@@ -3,30 +3,30 @@ import 'package:flutter/material.dart';
 import 'cool_divider.dart';
 
 class CoolDividerPage extends StatelessWidget {
-  const CoolDividerPage({Key? key}) : super(key: key);
+  const CoolDividerPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cool Divider'),
+        title: const Text('Cool Divider'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('普通のDivider'),
-          Divider(
+          const Text('普通のDivider'),
+          const Divider(
             color: Colors.blueAccent,
           ),
-          Divider(
+          const Divider(
             height: 20,
             color: Colors.blueAccent,
             thickness: 3,
           ),
-          SizedBox(
+          const SizedBox(
             height: 150,
           ),
-          Text('イケてるDivider'),
+          const Text('イケてるDivider'),
           CoolDivider(
             height: 16,
             thickness: 2,
@@ -45,7 +45,7 @@ class CoolDividerPage extends StatelessWidget {
               ],
             ),
           ),
-          CoolDivider(
+          const CoolDivider(
             height: 16,
             thickness: 2,
             gradient: LinearGradient(
@@ -55,13 +55,13 @@ class CoolDividerPage extends StatelessWidget {
                 Colors.orange,
                 Colors.blueAccent,
               ],
-              stops: const [
+              stops: [
                 0.0,
                 1.0,
               ],
             ),
           ),
-          CoolDivider(
+          const CoolDivider(
             height: 16,
             thickness: 2,
             gradient: LinearGradient(
@@ -72,7 +72,7 @@ class CoolDividerPage extends StatelessWidget {
                 Colors.pinkAccent,
                 Colors.blueAccent,
               ],
-              stops: const [
+              stops: [
                 0.0,
                 0.5,
                 1.0,

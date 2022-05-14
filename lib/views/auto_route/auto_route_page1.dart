@@ -1,15 +1,15 @@
-import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:experimental_site/router/router.gr.dart';
+import 'package:flutter/material.dart';
 
 class AutoRoutePage1 extends StatelessWidget {
-  const AutoRoutePage1({Key? key}) : super(key: key);
+  const AutoRoutePage1({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AutoRoutePage1'),
+        title: const Text('AutoRoutePage1'),
       ),
       body: Column(
         children: [
@@ -17,15 +17,17 @@ class AutoRoutePage1 extends StatelessWidget {
             onPressed: () {
               context.router.pushNamed('/main1/gorilla');
             },
-            child: Text('AutoRouteRoute1'),
+            child: const Text('AutoRouteRoute1'),
           ),
           ElevatedButton(
-            onPressed: () => context.router.popAndPush(AutoRouteRoute2()),
-            child: Text('AutoRouteRoute2'),
+            onPressed: () => context.router.popAndPush(
+              const AutoRouteRoute2(),
+            ),
+            child: const Text('AutoRouteRoute2'),
           ),
           ElevatedButton(
-            onPressed: () => context.router.push(AutoRouteRoute3()),
-            child: Text('AutoRouteRoute3'),
+            onPressed: () => context.router.push(const AutoRouteRoute3(),),
+            child: const Text('AutoRouteRoute3'),
           ),
         ],
       ),

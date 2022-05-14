@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class CoolDivider extends StatelessWidget {
   const CoolDivider({
-    Key? key,
+    super.key,
     required this.height,
     required this.thickness,
     this.indent = 0,
     this.endIndent = 0,
     required this.gradient,
-  }) : super(key: key);
+  });
 
   final double height;
   final double thickness;

@@ -2,40 +2,40 @@ import 'package:auto_route/auto_route.dart';
 import 'package:experimental_site/views/cool_divider/cool_divider_page.dart';
 import 'package:experimental_site/views/riverpod/riverpod_stateless.dart';
 
-import '../views/view.dart';
 import '../../main.dart';
+import '../views/view.dart';
 
 @AdaptiveAutoRouter(
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
-    AutoRoute(
+    AutoRoute<dynamic>(
       page: MyHomePage,
       initial: true,
     ),
-    CustomRoute(
+    CustomRoute<dynamic>(
       page: AutoRoutePage1,
       path: '/main1/gorilla',
       transitionsBuilder: TransitionsBuilders.fadeIn,
       durationInMilliseconds: 1000,
       // reverseDurationInMilliseconds: 3000
     ),
-    AutoRoute(
+    AutoRoute<dynamic>(
       page: AutoRoutePage2,
     ),
-    AutoRoute(
+    AutoRoute<dynamic>(
       page: AutoRoutePage3,
     ),
-    AutoRoute(
+    AutoRoute<dynamic>(
       page: FlutterSvgSample,
-      path: '/flutter-svg-sample'
+      path: '/flutter-svg-sample',
     ),
-    AutoRoute(
+    AutoRoute<dynamic>(
         page: CoolDividerPage,
-        path: '/cool-divider'
+        path: '/cool-divider',
     ),
-    AutoRoute(
+    AutoRoute<dynamic>(
         page: RiverpodStateless,
-        path: '/riverpod-stateless'
+        path: '/riverpod-stateless',
     ),
   ],
 )

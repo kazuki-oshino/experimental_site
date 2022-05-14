@@ -4,11 +4,10 @@ import 'package:flutter/material.dart';
 import 'riverpod_stateless_part2.dart';
 
 class RiverpodStateless extends StatelessWidget {
-  const RiverpodStateless({Key? key}) : super(key: key);
+  const RiverpodStateless({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Riverpod stateless'),
@@ -16,12 +15,11 @@ class RiverpodStateless extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-             Text('Riverpod stateless 開いた'),
-            const RiverpodStatelessPart1(),
-            const Divider(),
-             RiverpodStatelessPart2(),
-
+          children: const [
+            Text('Riverpod stateless 開いた'),
+            RiverpodStatelessPart1(),
+            Divider(),
+            RiverpodStatelessPart2(),
           ],
         ),
       ),

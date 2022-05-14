@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class FlutterSvgSample extends StatelessWidget {
-  const FlutterSvgSample({Key? key}) : super(key: key);
+  const FlutterSvgSample({super.key});
 
   @override
   Widget build(BuildContext context) {

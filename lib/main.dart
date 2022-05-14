@@ -13,6 +13,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  MyApp({super.key});
   final _rootRouter = RootRouter();
 
   @override
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -40,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('魂のサンプル'),
+        title: const Text('魂のサンプル123'),
       ),
       body: Center(
         child: Column(
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
             /// auto_route example
             ElevatedButton(
               onPressed: () => context.router.pushNamed('/main1/gorilla'),
-              child: Text('AutoRoute'),
+              child: const Text('AutoRoute'),
             ),
             ElevatedButton(
               onPressed: () async {
@@ -60,17 +61,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   null,
                 );
-                context.router.pushNamed('/flutter-svg-sample');
+                await context.router.pushNamed('/flutter-svg-sample');
               },
-              child: Text('FlutterSvg'),
+              child: const Text('FlutterSvg'),
             ),
             ElevatedButton(
               onPressed: () => context.router.pushNamed('/cool-divider'),
-              child: Text('Cool Divider'),
+              child: const Text('Cool Divider'),
             ),
             ElevatedButton(
               onPressed: () => context.router.pushNamed('/riverpod-stateless'),
-              child: Text('Riverpod'),
+              child: const Text('Riverpod'),
             ),
           ],
         ),
