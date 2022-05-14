@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('魂のサンプル123'),
+        title: const Text('play ground!'),
       ),
       body: Center(
         child: Column(
@@ -72,6 +72,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               onPressed: () => context.router.pushNamed('/riverpod-stateless'),
               child: const Text('Riverpod'),
+            ),
+            ElevatedButton(
+              onPressed: () => context.router.pushNamed('/enum-play-ground'),
+              child: const Text('Enum'),
             ),
           ],
         ),
