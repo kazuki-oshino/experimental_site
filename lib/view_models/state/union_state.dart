@@ -7,7 +7,7 @@ part 'union_state.freezed.dart';
 class UnionState with _$UnionState {
   const UnionState._();
 
-  @With<God>()
+  @With<_God>()
   const factory UnionState.test({
     @Default('maziname') String name,
     required String type,
@@ -18,7 +18,7 @@ class UnionState with _$UnionState {
   }) = UnionStateMarimo;
 }
 
-mixin God {
+mixin _God {
   String get type;
 
   String get message => type == '1' ? 'xxx' : 'yyy';

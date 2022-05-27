@@ -11,8 +11,8 @@ class FreezedPlayGround extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(exclusiveCountProvider);
     final notifier = ref.watch(exclusiveCountProvider.notifier);
-    const union = UnionStateTest(type: '1');
-    const union2 = UnionStateMarimo();
+    const union = UnionStateTest(type: '2');
+    const union2 = UnionStateTest(type: '1');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Freezed play ground!'),
@@ -52,6 +52,7 @@ class FreezedPlayGround extends HookConsumerWidget {
               ),
             ),
             Text(union.message),
+            Text(union2.message),
           ],
         ),
       ),
